@@ -43,4 +43,7 @@ RUN set -eux \
     done \
     && chmod +x /usr/local/bin/gu
 
+RUN gu install python 
+
+
 CMD java -version
