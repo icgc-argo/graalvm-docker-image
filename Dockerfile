@@ -3,11 +3,11 @@ FROM oraclelinux:7-slim
 # Note: If you are behind a web proxy, set the build variables for the build:
 #       E.g.:  docker build --build-arg "https_proxy=..." --build-arg "http_proxy=..." --build-arg "no_proxy=..." ...
 
-ARG GRAAL_VERSION=java11-20.2.0
+ARG GRAAL_VERSION=20.2.0
 ENV LANG=en_US.UTF-8
 
-ENV GRAALVM_PKG=https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-20.2.0/graalvm-ce-java11-linux-amd64-20.2.0.tar.gz \
-    JAVA_HOME=/opt/graalvm-ce-$GRAAL_VERSION/ \
+ENV GRAALVM_PKG=https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-$GRAAL_VERSION/graalvm-ce-java11-linux-amd64-$GRAAL_VERSION.tar.gz \
+    JAVA_HOME=/opt/graalvm-ce-java11-$GRAAL_VERSION/ \
     PATH=$PATH:/opt/rh/llvm-toolset-7/root/usr/bin \
     LD_LIBRARY_PATH=/opt/rh/llvm-toolset-7/root/usr/lib64 \
     MANPATH=/opt/rh/llvm-toolset-7/root/usr/share/man \
